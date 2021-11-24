@@ -31,8 +31,11 @@ def originalDigits(s:str):
     countSeven = s.count('v') - countFive
     countNine = s.count('i') - countFive- countSix - countEight
 
-    countNum = [countZero, countOne, countTwo, countThree, countFour, 
-                countFive, countSix, countSeven,countEight, countNine]
+    # countNum = [countZero, countOne, countTwo, countThree, countFour, 
+    #             countFive, countSix, countSeven,countEight, countNine]
+    #固定数据可使用元组
+    countNum = (countZero, countOne, countTwo, countThree, countFour, 
+                countFive, countSix, countSeven,countEight, countNine)
 
     for i in range(len(countNum)):
         numString = numString + str(i) * countNum[i]
